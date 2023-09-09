@@ -39,13 +39,6 @@ function MyNewCrush() {
     const no = () => {
         setAnswerstate(-1);
     };
-
-    const rs1 = ()=>{
-        location.href ='https://api.whatsapp.com/send?phone=82124422083&text=LOVE%20YOU%20STEPHEN%20%F0%9F%92%93%F0%9F%92%93%F0%9F%92%93';
-    };
-    const rs2 = ()=>{
-        location.href = 'https://api.whatsapp.com/send?phone=82124422083&text=Sorry...';
-    };
     return (
     <>
     <Navbar page="confess.exe"></Navbar>
@@ -80,14 +73,18 @@ function MyNewCrush() {
     {answerState === 1 && (
     <>
         <h1>Yay, love you 💓💓</h1>
-        <button onClick={rs1}>Respond at whatsapp</button>
+        <a href="https://api.whatsapp.com/send?phone=82124422083&text=Sorry...">
+            <button>Respond at whatsapp</button>
+        </a>
         
     </>
     )}
     {answerState === -1 && (
     <>
         <h2>Aww okay :( </h2>
-        <button onClick={rs2}>Respond at whatsapp</button>
+                                <a href="https://api.whatsapp.com/send?phone=82124422083&text=LOVE%20YOU%20STEPHEN%20%F0%9F%92%93%F0%9F%92%93%F0%9F%92%93">
+                                    <button>Respond at whatsapp</button>
+                                </a>
 
     </>
     )}
